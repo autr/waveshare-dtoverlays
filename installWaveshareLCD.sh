@@ -36,7 +36,7 @@ FBDEV='/usr/share/X11/xorg.conf.d/99-fbdev.conf'
 sudo truncate -s0 $FBDEV
 echo -e '# auto-generated from installWaveshare.sh' | sudo tee -a $FBDEV > /dev/null
 echo -e 'Section "Device"' | sudo tee -a $FBDEV > /dev/null
-echo -e '{\tIdentifier "Waveshare LCD"' | sudo tee -a $FBDEV > /dev/null
+echo -e '\tIdentifier "Waveshare LCD"' | sudo tee -a $FBDEV > /dev/null
 echo -e '\tDriver "fbdev"' | sudo tee -a $FBDEV > /dev/null
 echo -e '\tOption "fbdev" "/dev/fb1"' | sudo tee -a $FBDEV > /dev/null
 echo -e 'EndSection' | sudo tee -a $FBDEV > /dev/null
